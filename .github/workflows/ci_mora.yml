@@ -3,7 +3,7 @@ name: CI - rama mora
 on:
   push:
     branches:
-      - main
+      - main  # puedes cambiar a 'mora' si quieres que solo corra en tu rama de apellido
 
 jobs:
   test:
@@ -21,7 +21,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          # Instala Flask compatible con Python 3.11
+          pip install "Flask>=2.3.0,<2.4.0"
+          # Instala el resto de dependencias de requirements.txt
           pip install -r requirements.txt
 
       - name: Run tests
-        run: python app.py
+        run: |
+          # Ejecuta los tests con pytest
+          python -m pytest -q
