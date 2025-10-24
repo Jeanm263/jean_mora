@@ -11,5 +11,4 @@ def sumar(a, b):
     return jsonify({"result": a + b})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)  # Puerto cambiado de 3000 a 5001
-
+    app.run(host="0.0.0.0", port=3000)
