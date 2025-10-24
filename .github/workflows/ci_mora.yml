@@ -25,6 +25,7 @@ jobs:
           pip install "Flask>=2.3.0,<2.4.0"
           # Instalar el resto de dependencias de requirements.txt
           pip install -r requirements.txt
+           pip install pytest
 
       - name: Run tests
         run: |
